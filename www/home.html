@@ -13,23 +13,34 @@ function validateForm() {
     var firstName = document.forms["myForm"]["fname"].value;
     if (firstName == "") {
        // alert("First Name Must Be filled");
-		document.getElementById("demo").innerHTML = "First Name Missing";
+		document.getElementById("demo1").innerHTML = "First Name Missing";
     }
+	else{
+	document.getElementById("demo1").innerHTML = "";
+	}
 	
 	var LastName = document.forms["myForm"]["lname"].value;
     if (LastName == "") {
-		document.getElementById("demo").innerHTML = "Last Name Missing";
+		document.getElementById("demo2").innerHTML = "Last Name Missing";
     }
-
+	else{
+	document.getElementById("demo2").innerHTML = "";
+	}
 	var MobileNumber = document.forms["myForm"]["mobile"].value;
     if (MobileNumber == "") {
-		document.getElementById("demo").innerHTML = "Mobile Number Missing";
-    }	
+		document.getElementById("demo3").innerHTML = "Mobile Number Missing";
+    }
+	else{
+	document.getElementById("demo3").innerHTML = "";
+	}	
 	var HomeNumber = document.forms["myForm"]["home"].value;
     if (HomeNumber == "") {
-		document.getElementById("demo").innerHTML = "Home Number Missing";
+		document.getElementById("demo4").innerHTML = "Home Number Missing";
     }	
-	else
+	else{
+	document.getElementById("demo4").innerHTML = "";
+	}
+	if(firstName != "" && LastName != "" && MobileNumber != "" && HomeNumber != "")
 	{
 	document.getElementById("demo").innerHTML = " Input Accepted";
 	}
@@ -110,8 +121,10 @@ function validateForm() {
 		<h4>Student Registration</h4>
 		<a href="home.html" style="color:black">Back</a> 
 <form name="myForm" action="#" onsubmit="validateForm()" method="post">
-<p id="demo" style="color:red"></p>
+<p id="demo" style="color:green"></p>
+<p id="demo1" style="color:red"></p>
 	<p>    First Nmame :     <input type="text" name="fname" placeholder="First Name" id="fname" > </p>
+	<p id="demo2" style="color:red"></p>
 		<p>    Last Nmame :     <input type="text" name="lname" placeholder="Last Name" id="lname" > </p>
 <p> Country : 
 <select name="Country" id="countryName">
@@ -120,7 +133,9 @@ function validateForm() {
   <option value="ENG">ENG</option>
   <option value="AUS">AUS</option>
 </select></p>
+<p id="demo3" style="color:red"></p>
 <p>Mobile Number :     <input type="text" name="MobileNumber" placeholder="Mobile #" id="mobile" > </p> 
+<p id="demo4" style="color:red"></p>
 	<p>Home Number :     <input type="text" name="HomeNumber" placeholder="Home #" id="home" > </p> 
 <p>Contact Via :
 <label><input type="checkbox" id="emailcheck" value="first_checkbox"> Home </label>
