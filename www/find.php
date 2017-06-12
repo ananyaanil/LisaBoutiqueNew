@@ -37,7 +37,7 @@
 					if (mysqli_num_rows($result) > 0) {
 					    // output data of each row
 					    while($row = mysqli_fetch_assoc($result)) {
-									echo "StudentID: " . $row["Student_ID"]. "<br>";
+									echo "StudentID: " . $row["student_ID"]. "<br>";
 					        echo "First Name: " . $row["fname"]. "<br>";
 					        echo "Last Name: " . $row["lname"]. "<br><hr>";
 							echo "CourseID: " . $row["courseid"]. "<br><hr>";
