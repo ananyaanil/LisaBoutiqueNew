@@ -18,15 +18,14 @@
 		</h1>	</div>
 				<div data-role="content">
 
-
 					<?php
 					include 'config.php';
 					include 'opendb.php';
 
 					
-
 					$sql= "SELECT student_info.student_ID, student_info.fname, student_info.lname, course.courseid, course.course_description  from student_info
 						   JOIN course on student_info.student_ID = course.student_ID
+						   where student_info.fname='Kaye' and student_info.lname='Kim'
 						   ORDER BY student_info.lname ASC";
 					$result = mysqli_query($conn, $sql);
 
