@@ -21,11 +21,16 @@
 					<?php
 					include 'config.php';
 					include 'opendb.php';
+					
+					$fname= $lname="";
+					$fname=$_POST["fname"];
+					$lname= $_POST["lname"];
+					
 
 					
 					$sql= "SELECT student_info.student_ID, student_info.fname, student_info.lname, course.courseid, course.course_description  from student_info
 						   JOIN course on student_info.student_ID = course.student_ID
-						   where student_info.fname=$_POST["fname"] and student_info.lname=$_POST["lname"]
+						   where student_info.fname=$fname and student_info.lname=$lname
 						   ORDER BY student_info.lname ASC";
 					$result = mysqli_query($conn, $sql);
 
