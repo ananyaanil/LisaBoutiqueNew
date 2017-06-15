@@ -8,36 +8,7 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>College Home</title>
-<script>
-	var Notification = window.Notification || window.mozNotification || window.webkitNotification;
 
-	Notification.requestPermission(function (permission) {
-		// console.log(permission);
-	});
-
-	function show() {
-		var instance = new Notification(
-			"School Alert", {
-				body: "Assignments due coming up"
-			}
-		);
-
-		instance.onclick = function () {
-			// Something to do
-		};
-		instance.onerror = function () {
-			// Something to do
-		};
-		instance.onshow = function () {
-			// Something to do
-		};
-		instance.onclose = function () {
-			// Something to do
-		};
-	}
-</script>
-
-<button type="button" onclick="show()">Notify me!</button>
 
 <button type="button" onclick="show()">Notify me!</button>
 
