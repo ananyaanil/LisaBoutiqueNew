@@ -56,51 +56,60 @@ $("#srchForm").load("./searchform.html");
 
 <div id="page" data-role="page" data-theme="b">
 	<div data-role="header" data-theme="b">
-	  <div class="logo"><img src="img/rasmussen_logo[1].png" width="218" height="45" alt=""/></div>
+	  <div class="logo"><img src="img/logolisa.png" width="200" height="100" alt=""/>
+  </div>
 	</div>
 	<div data-role="content">	
 		<ul data-role="listview" data-theme="c">
-			<li><a href="#section1">College Details</a></li>
-            <li><a href="#section2">Course Offering</a></li>
+			<li><a href="#section1">About Us</a></li>
+            <li><a href="#section2">Store Login</a></li>
 			<li><a href="#section3">Locations</a></li>
-			<li><a href="#section4">Student Registration</a></li>
-			<li><a href="#section5">Query</a></li> 
+			<li><a href="#section4">Designs</a></li>
 			<li><a href="#section6">Contact Us</a></li>
 		</ul>		
 	</div>
 	<div data-role="footer"  style=" bottom:0;" data-theme="b">
-	  <h4>Rasmussen College &copy; 2015</h4>
+	  <h4>lisa's Boutique &copy; 2017</h4>
 	</div>
 </div>
 
 <div id="section1" data-role="page" data-theme="b">
 	<div data-role="header" data-theme="b">
-	  <h1>College Details</h1>
+	  <h1>About Us</h1>
 		<a href="home.html" style="color:black">Back</a>  
 	</div>
 	<div data-role="content">
-	  <h3>College History</h3>
-	  <p> Walter Rasmussen founded Rasmussen College at the turn of the century, to meet the needs of a growing business environment. Originally named the Rasmussen Practical School of Business, the first campus opened its doors in 1900 in Stillwater, Minnesota. The college was a welcome addition to the city’s landscape, where the promise of top-notch secretarial and accounting programs gave eager new students the skills to succeed in the new business climate. </p>
+	  <h3>Boutique History</h3>
+	  <p> Lisa's Boutique is your go-to Online Womens Clothing boutique. Our Online Boutique is the place for dressing up your wardrobe with our affordable prices! Whether you’re interested in a fun romper for a day on the beach, a frilly fit and flare dress for the perfect date night, the ultimate little black dress to impress and show off your figure, matching accessories to make your ensemble sparkle, or simple fashion advice to help you look and feel your best at all times, you can rest assured that we have your back. Let our team of creative, fashion-forward women who love all things fashion serve you by providing you with the finest curated collections of boutique fashion. Lotus Online Boutique has become one of the # 1 online boutiques with fashion inspiring style. We want to be the go to online clothing boutique for women from all walks of life. Go on. Have fun, let go, and don’t forget to spoil yourself every once in a while.</p>
 	 	</div>
 	
 	<div data-role="footer"  style=" bottom:0;" data-theme="b">
-	  <h4>Rasmussen College &copy; 2015</h4>
+	  <h4>lisa's Boutique &copy; 2017</h4>
 	</div>
 </div>
 
 <div id="section2" data-role="page" data-theme="b">
 	<div data-role="header" data-theme="b">
-		<h1>Course Offering</h1>
+		<h1>Store Login</h1>
 		<a href="home.html" style="color:black">Back</a>  
 	</div>
-	<div data-role="content">	
-	  <h3>cs 630 Computer Science</h3>
-	  <p> Using technology from Amazon, Apple and Microsoft, the Computer Science program provides you with a foundation in mobile, analytics and cloud computing few other programs can match. </p>
-	  <h3>CS 691 Information Security</h3>
-	  <p> Our Information Security Bachelor's degree provides the security knowledge and investigative skills you need to enter this specialized area of technology </p>
-	</div>
+	<div class="container">
+    <label><b>Username</b></label>
+    <input type="text" style="width: 50%;" placeholder="Enter Username" name="uname" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit" style="width: 50%;height= 50%">Login</button>
+    <input type="checkbox" checked="checked"> Remember me
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
 <div data-role="footer"  style=" bottom:0;" data-theme="b">
-	  <h4>Rasmussen College &copy; 2015</h4>
+	  <h4>lisa's Boutique &copy; 2017</h4>
 	</div>
 </div>
 
@@ -111,20 +120,25 @@ $("#srchForm").load("./searchform.html");
 	</div>
 	<div data-role="content">	
 	  <h3>Minnesota</h3>
-	  <p>Blaine Campus, Bloomington Campus, Brooklyn Park/Maple Grove Campus, Eagan Campus, Lake Elmo/Woodbury Campus, Mankato Campus, Moorhead Campus, St. Cloud Campus </p>
+	  <p></p>
 	  <h3>Illinois</h3>
-	  <p>Aurora/Naperville Campus, Mokena/Tinley Park Campus, Rockford Campus, Romeoville/Joliet Campus</p>
+	  <p></p>
       </div>
 	<div data-role="footer" style=" bottom:0;" data-theme="b">
-	   <h4>Rasmussen College &copy; 2015</h4>
+	   <h4>lisa's Boutique &copy; 2017</h4>
 	</div>
 </div>
 
 
 <div id="section4" data-role="page" data-theme="b">
 	<div data-role="header" data-theme="b">
-		<h4>Student Registration</h4>
+		<h4>Lisa's Designs</h4>
 		<a href="home.html" style="color:black">Back</a> 
+	<div data-role="content">	
+		<img src="img/image1.jpg" alt="Paris" style="width:40%">&nbsp &nbsp &nbsp
+		<img src="img/image2.jpg" alt="Paris" style="width:40%"></br>
+		<img src="img/image3.jpg" alt="Paris" style="width:40%">
+		</div>
 <form name="myForm" action="#" onsubmit="validateForm()" method="post">
 <p id="demo" style="color:green"></p>
 <p id="demo1" style="color:red"></p>
@@ -151,7 +165,7 @@ $("#srchForm").load("./searchform.html");
 </form>	
 	</div>
 	<div data-role="footer" style=" bottom:0;" data-theme="b">
-	   <h4>Rasmussen College &copy; 2015</h4>
+	   <h4>lisa's Boutique &copy; 2017</h4>
 	</div>
 	</div>
 	
@@ -186,7 +200,7 @@ $("#srchForm").load("./searchform.html");
                </form>
 	</div>
 	<div data-role="footer" style=" bottom:0;" data-theme="b">
-	   <h4>Rasmussen College &copy; 2015</h4>
+	   <h4>lisa's Boutique &copy; 2017</h4>
 	</div>
 	</div>
 
@@ -216,10 +230,11 @@ $("#srchForm").load("./searchform.html");
 </form>	
 	</div>
 	<div data-role="footer"  style=" bottom:0;" data-theme="b">
-		<h4>Rasmussen College &copy; 2015</h4>
+		<h4>lisa's Boutique &copy; 2017</h4>
 	</div>
 </div>
 
 
 </body>
 </html>
+
