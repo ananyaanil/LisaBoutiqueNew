@@ -1,7 +1,7 @@
 <?php
 // This is an example of config.php
 $dbhost = 'us-cdbr-azure-central-a.cloudapp.net';
-$dbuser = 'b9250d1e5945d3';
-$dbpass = 'ca0a8ee6';
-$dbname = 'aanildb';
+$dbuser = 'LisBotique';
+$dbpass = 'pjogyb4YH7s5GSXueELkdvmtfsjonw6sucuokubu5xMJESCdpYgZCn46ruhc';
+$dbname = 'lisdatabase';
 ?>
