@@ -1,58 +1,43 @@
-<html>
-		<head>
-	<title>Find a Student</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles/custom.css" />
-<link rel="stylesheet" href="css/rasmussenthemeroller.min.css" />
-<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<script src="javascript/storage.js"></script>
-</head>
-	<body>
-		<div id="page" data-role="page" data-theme="b" >
-	<div data-role="header" data-theme="b">
-<h1>
-	Search
-		</h1>	</div>
-				<div data-role="content">
+session_start();
 
-					<?php
-					include 'config.php';
-					include 'opendb.php';
-					
-					$fname= $lname="";
-					$fname=$_POST["fname"];
-					$lname= $_POST["lname"];
-					
+// variable declaration
+$username = "";
+$email    = "";
+$errors = array(); 
+$_SESSION['success'] = "";
 
-					
-					$sql= "SELECT student_info.student_ID, student_info.fname, student_info.lname, course.courseid, course.course_description  from student_info
-						   JOIN course on student_info.student_ID = course.student_ID
-						   where student_info.fname='$fname' and student_info.lname='$lname'
-						   ORDER BY student_info.lname ASC";
-					$result = mysqli_query($conn, $sql);
+// connect to database
+$db = mysqli_connect('localhost', 'root', '', 'registration');
 
-					if (mysqli_num_rows($result) > 0) {
-					    // output data of each row
-					    while($row = mysqli_fetch_assoc($result)) {
-									echo "StudentID: " . $row["student_ID"]. "<br>";
-					        echo "First Name: " . $row["fname"]. "<br>";
-					        echo "Last Name: " . $row["lname"]. "<br><hr>";
-							echo "CourseID: " . $row["courseid"]. "<br><hr>";
-							echo "Course Description: " . $row["course_description"]. "<br><hr>";
-					    }
-					} else {
-					    echo "0 results";
-					}
+// REGISTER USER
+if (isset($_POST['reg_user'])) {
+	// receive all input values from the form
+	$username = mysqli_real_escape_string($db, $_POST['username']);
+	$email = mysqli_real_escape_string($db, $_POST['email']);
+	$password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
+	$password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 
-					mysqli_close($conn);
+	// form validation: ensure that the form is correctly filled
+	if (empty($username)) { array_push($errors, "Username is required"); }
+	if (empty($email)) { array_push($errors, "Email is required"); }
+	if (empty($password_1)) { array_push($errors, "Password is required"); }
 
-					?>
+	if ($password_1 != $password_2) {
+		array_push($errors, "The two passwords do not match");
+	}
 
-				<div data-role="footer" data-theme="b">
-	  <h4>Darice Corey-Gilbert &copy; 2016</h4>
-	</div>
-	</body>
-</html>
+	// register user if there are no errors in the form
+	if (count($errors) == 0) {
+		$password = md5($password_1);//encrypt the password before saving in the database
+		$query = "INSERT INTO users (username, email, password) 
+				  VALUES('$username', '$email', '$password')";
+		mysqli_query($db, $query);
+
+		$_SESSION['username'] = $username;
+		$_SESSION['success'] = "You are now logged in";
+		header('location: index.php');
+	}
+
+}
+
+// ... 
