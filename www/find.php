@@ -18,8 +18,9 @@ if($count==1)
       return true; } 
     else
     {
-      echo "Wrong Username or Password";
+      <?php header('Location: login.php');?> 
+       echo "Wrong Username or Password";
       <html> <head> <title>My Title</title> </head> <body> <p>LOGIN FAILED</p> </body> </html> 
-      <?php header('Location: login.php');?>
+     
       return false; } 
 }?
