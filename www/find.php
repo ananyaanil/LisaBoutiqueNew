@@ -1,4 +1,4 @@
-?php // REGISTER USER 
+<?php // REGISTER USER 
 include_once('opendb.php'); 
 $username = ($_POST['uname']); $password_1 = ($_POST['psw']); 
 $tsql="SELECT * FROM login WHERE username='$username'and password='$password_1'"; 
@@ -24,4 +24,4 @@ if($count==1)
       <html> <head> <title>My Title</title> </head> <body> <p>LOGIN FAILED</p> </body> </html> 
      
       return false; } 
-}?
+}?>
