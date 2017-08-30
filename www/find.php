@@ -21,4 +21,5 @@ if($count==1)
       echo "Wrong Username or Password";
       <html> <head> <title>My Title</title> </head> <body> <p>LOGIN FAILED</p> </body> </html> 
       <?php header(“Location: login.php”);?>
-      return false; } ?
+      return false; } 
+}?
