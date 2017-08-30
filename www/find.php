@@ -1,4 +1,5 @@
-?php // REGISTER USER include_once('opendb.php'); 
+?php // REGISTER USER 
+include_once('opendb.php'); 
 $username = ($_POST['uname']); $password_1 = ($_POST['psw']); 
 $tsql="SELECT * FROM login WHERE username='$username'and password='$password_1'"; 
 $result=sqlsrv_query($conn,$sql); $count=sqlsrv_num_rows($result); 
