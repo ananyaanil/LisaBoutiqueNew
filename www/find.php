@@ -1,6 +1,6 @@
 ?php // REGISTER USER include_once('opendb.php'); 
 $username = ($_POST['uname']); $password_1 = ($_POST['psw']); 
-$tsql="SELECT * FROM login WHERE username='$username'"; 
+$tsql= "Select * from login where username ='$username' and psw ='$password_1'";
 $result=sqlsrv_query($conn,$sql); $count=sqlsrv_num_rows($result); 
 // If result matched $username and $password, table row must be 1 row if($count==1){ $row = sqlsrv_fetch_array($result); 
 if ($password_1)) == $row['password']){ session_register("username"); session_register("password"); 
