@@ -15,7 +15,7 @@ echo "Login Successful"; <html> <body> <p>LOGIN SUCCESSFUL</p> </body> </html>
 		include_once('opendb.php'); 
 $username = ($_POST['uname']); 
 $password_1 = ($_POST['psw']); 
-$tsql="Select * from login where username='$username' and password = '$password_1 '";
+$tsql="Select * from login where username='$username' and password = '$password_1'";
 $result=sqlsrv_query($conn,$tsql);$count=sqlsrv_num_rows($result); 
 // If result matched $username and $password, table row must be 1 row
  if($count==1){ 
@@ -25,7 +25,7 @@ $result=sqlsrv_query($conn,$tsql);$count=sqlsrv_num_rows($result);
 session_register("password"); 
  //header('Location: home.html');
 echo "
-     <html> <body> <p>LOGIN SUCCESSFUL</p> </body> </html> "
+     <html> <body> <p>LOGIN SUCCESSFUL</p> </body> </html> "}
      else{
      echo " <html> <body> <p>LOGIN NOT SUCCESSFUL</p> </body> </html>"
      }
