@@ -12,7 +12,7 @@ echo "Login Successful"; <html> <body> <p>LOGIN SUCCESSFUL</p> </body> </html>
 <html> <head> <title>My Title</title> </head> <body> <p>LOGIN FAILED</p> </body> </html> header(“Location: login.php”); return false; } 
 */ ?>
 <?php
-		include_once('opendb.php'); 
+//include_once('opendb.php'); 
 $username = ($_POST['uname']); 
 $password_1 = ($_POST['psw']); 
 $tsql="Select * from login where username='$username' and password = '$password_1'";
