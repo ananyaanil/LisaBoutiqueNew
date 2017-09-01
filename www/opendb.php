@@ -5,7 +5,7 @@ $port=3306;
 $socket="";
 $user="mysqldbuser@lisbotique-mysqldbserver";
 $password="ashley98R";
-$dbname="lisas' account";
+$dbname="accounts";
 
 $conn = new mysqli($host, $user, $password, $dbname, $port, $socket) 
 or die ('Could not connect to the database server' . mysqli_connect_error());
