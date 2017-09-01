@@ -20,9 +20,9 @@ if($count == 1) {
     $_SESSION['username'] = $username;
     header("location: home.html");
 }else {
-    echo <p>$username; 
-    echo <p>$sql;
-    echo <p>$count;
+    echo '<p>' + $username; 
+    echo '<p>' + $sql;
+    echo '<p>' + $count;
     echo "Your Login Name or Password is invalid!";
 }
 ?>
