@@ -1,5 +1,5 @@
 <?php
-include_once('opendb.php'); 
+include 'opendb.php'; 
 $username = ($_POST['uname']); 
 $password_1 = ($_POST['psw']); 
 $sql="Select * from 'accounts'.login where username='$username' and password = '$password_1'";
@@ -8,9 +8,7 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 $active = $row['active'];
 
 $count = mysqli_num_rows($result);
-echo <p>$username</p>; 
-echo <p>$sql</p>;
-echo <p>$count</p>;
+
 
 
 // If result matched $myusername and $mypassword, table row must be 1 row
@@ -22,6 +20,9 @@ if($count == 1) {
     $_SESSION['username'] = $username;
     header("location: home.html");
 }else {
+    echo <p>$username</p>; 
+    echo <p>$sql</p>;
+    echo <p>$count</p>;
     echo "Your Login Name or Password is invalid!";
 }
 ?>
