@@ -21,4 +21,3 @@ if($count == 1) {
     echo "Your Login Name or Password is invalid!";
 }
 ?>
-
