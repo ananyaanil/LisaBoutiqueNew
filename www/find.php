@@ -8,6 +8,10 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 $active = $row['active'];
 
 $count = mysqli_num_rows($result);
+echo <p>$username</p>; 
+echo <p>$sql</p>;
+echo <p>$count</p>;
+
 
 // If result matched $myusername and $mypassword, table row must be 1 row
   
