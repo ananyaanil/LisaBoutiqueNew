@@ -2,7 +2,7 @@
 include_once('opendb.php'); 
 $username = ($_POST['uname']); 
 $password_1 = ($_POST['psw']); 
-$sql="Select * from accounts.login where username='$username' and password = '$password_1'";
+$sql="Select * from 'accounts'.login where username='$username' and password = '$password_1'";
 $result = mysqli_query($conn,$sql);
 $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 $active = $row['active'];
