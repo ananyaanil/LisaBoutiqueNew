@@ -16,10 +16,10 @@ if($count == 1) {
     session_start();
     $_SESSION['loggedin'] = true;
     $_SESSION['username'] = $username;
-    header("location: home.html");
+    header("Refresh:0; location: home.html");
 }else {
     $error = "Your Login Name or Password is invalid!! $username";
-  header("location: home.html#section2");
+  
 }
 
 ?>
