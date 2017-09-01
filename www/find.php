@@ -24,5 +24,6 @@ if($count == 1) {
     header("location: home.html");
 }else {
     $error = "Your Login Name or Password is invalid!! $username";
+    echo $error;
 }
 ?>
