@@ -8,11 +8,6 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 $active = $row['active'];
 
 $count = mysqli_num_rows($result);
-    echo '<p>' + $username; 
-    echo '<p>' + $sql;
-    echo '<p>' + $count;
-    echo 'hello';
-
 
 // If result matched $myusername and $mypassword, table row must be 1 row
   
@@ -24,6 +19,6 @@ if($count == 1) {
     header("location: home.html");
 }else {
     $error = "Your Login Name or Password is invalid!! $username";
-    echo $error;
 }
+echo $error;
 ?>
