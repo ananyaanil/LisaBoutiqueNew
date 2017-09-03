@@ -1,5 +1,5 @@
 <?php
- if (!isset($_SESSION)) {
+ if (!isset($_SESSION['username'])) {
       session_start();
 }
 if($_SESSION['loggedin'] != "true"){
