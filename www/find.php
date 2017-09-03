@@ -1,6 +1,7 @@
 <?php
  if (!isset($_SESSION['username'])) {
       session_start();
+	$_SESSION['loggedin'] = "false";
 }
 if($_SESSION['loggedin'] != "true"){
 include 'opendb.php'; 
