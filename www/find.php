@@ -99,7 +99,7 @@ $("#srchForm").load("./searchform.html");
 <div id="section1" data-role="page" data-theme="b">
 	<div data-role="header" data-theme="b">
 	  <h1>About Us</h1>
-		<a href="home.html" style="color:black">Back</a>  
+		<a href="#" style="color:black">Back</a>  
 	</div>
 	<div data-role="content">
 	  <h3>Boutique History</h3>
