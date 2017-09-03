@@ -1,5 +1,7 @@
 <?php
-     session_start();
+ if (!isset($_SESSION)) {
+      session_start();
+}
 if($_SESSION['loggedin'] != "true"){
 include 'opendb.php'; 
 $username = ($_POST['uname']); 
