@@ -25,8 +25,6 @@ else {
     header("location: home.html");
 }
 }
-
-?>
  ?>
 <!DOCTYPE html> 
 <html>
