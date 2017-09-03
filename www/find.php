@@ -1,4 +1,5 @@
 <?php
+if($_SESSION['loggedin'] != true){
 include 'opendb.php'; 
 $username = ($_POST['uname']); 
 $password_1 = ($_POST['psw']); 
@@ -10,12 +11,22 @@ $active = $row['active'];
 $count = mysqli_num_rows($result);
 
 // If result matched $myusername and $mypassword, table row must be 1 row
-  
+
 if($count == 1) {
     echo "success!";
     session_start();
     $_SESSION['loggedin'] = true;
     $_SESSION['username'] = $username;
+// header("location: home.html");
+}
+else {
+    $error = "Your Login Name or Password is invalid!! $username";
+    echo $error;
+    header("location: home.html");
+}
+}
+
+?>
  ?>
 <!DOCTYPE html> 
 <html>
@@ -99,7 +110,7 @@ $("#srchForm").load("./searchform.html");
 <div id="section1" data-role="page" data-theme="b">
 	<div data-role="header" data-theme="b">
 	  <h1>About Us</h1>
-		<a href="#" style="color:black">Back</a>  
+		<a href="find.php" style="color:black">Back</a>  
 	</div>
 	<div data-role="content">
 	  <h3>Boutique History</h3>
@@ -272,13 +283,4 @@ $("#srchForm").load("./searchform.html");
 </html>
 
 
-<?php
-// header("location: home.html");
-}else {
-    $error = "Your Login Name or Password is invalid!! $username";
-    echo $error;
-    header("location: home.html");
-  
-}
 
-?>
