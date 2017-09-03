@@ -31,9 +31,8 @@ else {
 }
 }
 else {
-  
-    $_SESSION['loggedin'] = "false";
-    header("location: home.html");
+
+    header("location: find.php");
 }
 
  ?>
