@@ -25,6 +25,10 @@ else {
     header("location: home.html");
 }
 }
+else
+{
+	 header("location: 404");
+}
  ?>
 <!DOCTYPE html> 
 <html>
