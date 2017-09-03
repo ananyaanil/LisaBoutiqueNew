@@ -1,6 +1,6 @@
 <?php
      session_start();
-if($_SESSION['loggedin'] != true){
+if($_SESSION['loggedin'] != "true"){
 include 'opendb.php'; 
 $username = ($_POST['uname']); 
 $password_1 = ($_POST['psw']); 
@@ -16,17 +16,22 @@ $count = mysqli_num_rows($result);
 if($count == 1) {
     echo "success!";
     session_start();
-    $_SESSION['loggedin'] = true;
+    $_SESSION['loggedin'] = "true";
     $_SESSION['username'] = $username;
 // header("location: home.html");
 }
 else {
     $error = "Your Login Name or Password is invalid!! $username";
 
-    $_SESSION['username'] = "error"
-    echo $error;
+    $_SESSION['loggedin'] = "false";
+
     header("location: home.html");
 }
+}
+else {
+  
+    $_SESSION['loggedin'] = "false";
+    header("location: home.html");
 }
 
  ?>
