@@ -120,6 +120,7 @@ $("#srchForm").load("./searchform.html");
 	<div data-role="header" data-theme="b">
 	  <h1>About Us</h1>
 		<a href="find.php" style="color:black">Back</a>  
+		<a href="logout.php" style="color:black">Logout</a>  
 	</div>
 	<div data-role="content">
 	  <h3>Boutique History</h3>
@@ -137,7 +138,8 @@ $("#srchForm").load("./searchform.html");
 <div id="section3" data-role="page" data-theme="b">
 	<div data-role="header" data-theme="b">
 		<h1>Locations</h1>
-		<a href="find.php" style="color:black">Back</a>  
+		<a href="find.php" style="color:black">Back</a> 
+				<a href="logout.php" style="color:black">Logout</a>  
 	</div>
 	<div data-role="content">	
 	  <h3>Minnesota</h3>
@@ -156,6 +158,7 @@ $("#srchForm").load("./searchform.html");
 	<div data-role="header" data-theme="b">
 		<h4>Lisa's Designs</h4>
 		<a href="find.php" style="color:black">Back</a> 
+				<a href="logout.php" style="color:black">Logout</a>  
 	<div data-role="content">	
 		<img src="img/image1.jpg" alt="Paris" style="width:40%">&nbsp &nbsp &nbsp
 		<img src="img/image2.jpg" alt="Paris" style="width:40%"></br>
@@ -199,6 +202,7 @@ $("#srchForm").load("./searchform.html");
 	Search
 		</h1>	
 		<a href="find.php" style="color:black">Back</a> 
+				<a href="logout.php" style="color:black">Logout</a>  
 		</div>
 		
 				<div data-role="content">
@@ -232,6 +236,7 @@ $("#srchForm").load("./searchform.html");
 	<div data-role="header" data-theme="b">
 		<h1>Contact Us</h1>
 		<a href="find.php" style="color:black">Back</a> 
+				<a href="logout.php" style="color:black">Logout</a>  
 	</div>
   <div data-role="content">	
 <h4> Contact Via : </h4>
