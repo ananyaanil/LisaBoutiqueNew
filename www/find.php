@@ -1,4 +1,5 @@
 <?php
+     session_start();
 if($_SESSION['loggedin'] != true){
 include 'opendb.php'; 
 $username = ($_POST['uname']); 
@@ -21,7 +22,7 @@ if($count == 1) {
 }
 else {
     $error = "Your Login Name or Password is invalid!! $username";
-     session_start();
+
     $_SESSION['username'] = "error"
     echo $error;
     header("location: home.html");
