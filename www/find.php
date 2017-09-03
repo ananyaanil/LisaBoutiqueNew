@@ -21,6 +21,8 @@ if($count == 1) {
 }
 else {
     $error = "Your Login Name or Password is invalid!! $username";
+	
+    $_SESSION['username'] = "error"
     echo $error;
     header("location: home.html");
 }
