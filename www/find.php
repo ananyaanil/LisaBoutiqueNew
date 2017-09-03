@@ -122,37 +122,11 @@ $("#srchForm").load("./searchform.html");
 	</div>
 </div>
  </div>
-<div id="section2" data-role="page" data-theme="b">
-	<div data-role="header" data-theme="b">
-		<h1>Store Login</h1>
-		<a href="home.html" style="color:black">Back</a>  
-	</div>
-	<div class="container">
-		<form method="POST" action="find.php">
-    <label><b>Username</b></label>
-    <input type="text" style="width: 50%;" placeholder="Enter Username" name="uname" required>
 
-    <label><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-        
-    <button type="submit" style="width: 50%;height= 50%">Login</button>
-    <input type="checkbox" checked="checked"> Remember me
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-<div data-role="footer"  style=" bottom:0;" data-theme="b">
- <div class="logo"><img src="img/LOGO.png" width="200" height="200" alt=""/>
-	  <h4>lisa's Boutique &copy; 2017</h4>
-	</div>
-</div>
- </div>
 <div id="section3" data-role="page" data-theme="b">
 	<div data-role="header" data-theme="b">
 		<h1>Locations</h1>
-		<a href="home.html" style="color:black">Back</a>  
+		<a href="find.php" style="color:black">Back</a>  
 	</div>
 	<div data-role="content">	
 	  <h3>Minnesota</h3>
@@ -170,7 +144,7 @@ $("#srchForm").load("./searchform.html");
 <div id="section4" data-role="page" data-theme="b">
 	<div data-role="header" data-theme="b">
 		<h4>Lisa's Designs</h4>
-		<a href="home.html" style="color:black">Back</a> 
+		<a href="find.php" style="color:black">Back</a> 
 	<div data-role="content">	
 		<img src="img/image1.jpg" alt="Paris" style="width:40%">&nbsp &nbsp &nbsp
 		<img src="img/image2.jpg" alt="Paris" style="width:40%"></br>
@@ -213,7 +187,7 @@ $("#srchForm").load("./searchform.html");
 <h1>
 	Search
 		</h1>	
-		<a href="home.html" style="color:black">Back</a> 
+		<a href="find.php" style="color:black">Back</a> 
 		</div>
 		
 				<div data-role="content">
@@ -246,7 +220,7 @@ $("#srchForm").load("./searchform.html");
 <div data-role="page" id="section6" data-theme="b">
 	<div data-role="header" data-theme="b">
 		<h1>Contact Us</h1>
-		<a href="home.html" style="color:black">Back</a> 
+		<a href="find.php" style="color:black">Back</a> 
 	</div>
   <div data-role="content">	
 <h4> Contact Via : </h4>
