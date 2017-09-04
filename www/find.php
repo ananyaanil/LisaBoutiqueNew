@@ -111,7 +111,7 @@ $("#srchForm").load("./searchform.html");
 			<li><a href="#section4">Designs</a></li>
 			<li><a href="#section6">Contact Us</a></li>
 		</ul>	
-		  <a href="logout.php" style="color:black">Logout</a> 
+		  
 	</div>
 	<div data-role="footer"  style=" bottom:0;" data-theme="b">
 	  <h4>lisa's Boutique &copy; 2017</h4>
