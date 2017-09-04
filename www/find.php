@@ -114,7 +114,7 @@ $("#srchForm").load("./searchform.html");
 		  
 	</div>
 	<div data-role="header" data-theme="b">
-		<h1>Locations</h1>
+		
 		<a href="find.php" style="color:black">Back</a> 
 				<a href="logout.php" style="color:black">Logout</a>  
 	</div>
