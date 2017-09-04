@@ -113,6 +113,11 @@ $("#srchForm").load("./searchform.html");
 		</ul>	
 		  
 	</div>
+	<div data-role="header" data-theme="b">
+		<h1>Locations</h1>
+		<a href="find.php" style="color:black">Back</a> 
+				<a href="logout.php" style="color:black">Logout</a>  
+	</div>
 	<div data-role="footer"  style=" bottom:0;" data-theme="b">
 	  <h4>lisa's Boutique &copy; 2017</h4>
 	</div>
