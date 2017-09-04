@@ -98,6 +98,7 @@ $("#srchForm").load("./searchform.html");
     <ul data-role="listview" data-theme="c">
       <li><p> Welcome <?php   echo $_SESSION['username'];  ?> </p> </li>
     </ul>
+	  <a href="logout.php" style="color:black">Logout</a>  
   </div>
 	<div data-role="header" data-theme="b">
 	  <div class="logo"><img src="img/LOGO.png" width="200" height="200" alt=""/>
