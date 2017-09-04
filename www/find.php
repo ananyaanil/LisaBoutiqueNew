@@ -99,7 +99,7 @@ $("#srchForm").load("./searchform.html");
       <li><p> Welcome <?php   echo $_SESSION['username'];  ?> </p> </li>
     </ul>
   </div>
-	<div data-role="header" data-theme="b">
+	<div data-role="center" data-theme="b">
 	  <div class="logo"><img src="img/LOGO.png" width="200" height="200" alt=""/>
   </div>
 	</div>
