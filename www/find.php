@@ -96,7 +96,7 @@ $("#srchForm").load("./searchform.html");
 <div id="page" data-role="page" data-theme="b">
   <div data-role="content">
     <ul data-role="listview" data-theme="c">
-      <li><p> Welcome <?php   echo $_SESSION['username'];  ?> </p> </li>
+    
     </ul>
 	 
   </div>
