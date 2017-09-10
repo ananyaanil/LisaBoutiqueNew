@@ -125,11 +125,12 @@ $("#srchForm").load("./searchform.html");
 </div>
 
 <div id="section1" data-role="page" data-theme="b">
-	<li><p> Welcome <?php   echo $_SESSION['username'];  ?> </p> </li>
+	
 	<div data-role="header" data-theme="b">
 	  <h1>About Us</h1>
 		<a href="find.php" style="color:black">Back</a>  
 		<a href="logout.php" style="color:black">Logout</a>  
+		<li><p> Welcome <?php   echo $_SESSION['username'];  ?> </p> </li>
 	</div>
 	<div data-role="content">
 	  <h3>Boutique History</h3>
