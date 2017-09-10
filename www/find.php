@@ -125,6 +125,7 @@ $("#srchForm").load("./searchform.html");
 </div>
 
 <div id="section1" data-role="page" data-theme="b">
+	<li><p> Welcome <?php   echo $_SESSION['username'];  ?> </p> </li>
 	<div data-role="header" data-theme="b">
 	  <h1>About Us</h1>
 		<a href="find.php" style="color:black">Back</a>  
