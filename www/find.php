@@ -173,6 +173,8 @@ $("#srchForm").load("./searchform.html");
 		<img src="img/image1.jpg" alt="Paris" style="width:40%">&nbsp &nbsp &nbsp
 		<img src="img/image2.jpg" alt="Paris" style="width:40%"></br>
 		<img src="img/image3.jpg" alt="Paris" style="width:40%"></br>
+	<img src="fashionaccessories.jpg" alt="Paris" style="width:40%"></br>
+	<img src="mint_fashion_accessories2.jpg" alt="Paris" style="width:40%">
 		
 	
 		</div>
